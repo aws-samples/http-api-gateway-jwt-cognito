@@ -48,7 +48,7 @@ export class HttpApiGatewayJwtCognitoStack extends cdk.Stack {
           new iam.ServicePrincipal('lambda.amazonaws.com'),
         ),
         inlinePolicies: {
-          bedrock: new iam.PolicyDocument({
+          invokeLambda: new iam.PolicyDocument({
             statements: [
               new iam.PolicyStatement({
                 effect: iam.Effect.ALLOW,
